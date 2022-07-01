@@ -2,12 +2,11 @@ import { Fragment } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import '~/App.css'
 import { DefaultLayout } from '~/components/Layout'
-import NotFound from './pages/NotFound'
+import NotFound from './components/NotFound'
 import { publicRoutes } from './routes'
 
 function App() {
     return (
-        // <Container >
         <BrowserRouter>
             <Routes>
                 {publicRoutes.map((route, index) => {
@@ -25,7 +24,6 @@ function App() {
                             element={
                                 <Layout>
                                     <Page />
-                                    <div>Hello</div>
                                 </Layout>
                             }
                         />
@@ -34,7 +32,6 @@ function App() {
                 <Route path="*" element={<NotFound />} />
             </Routes>
         </BrowserRouter>
-        // </Container>
     )
 }
 

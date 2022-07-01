@@ -1,22 +1,17 @@
-import { makeStyles, Paper, Typography } from '@material-ui/core'
-
-const useStyles = makeStyles((theme) => ({
-    root: {
-        flexGrow: 1,
-    },
-    paper: {
-        padding: theme.spacing(1),
-        marginBottom: theme.spacing(1),
-        textAlign: 'center',
-        color: theme.palette.text.secondary,
-    },
-}))
-
-function Header() {
-    const classes = useStyles()
+import Button from '@mui/material/Button'
+import { Box, Paper, Typography } from '@mui/material';
+import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
+import DoubleArrowOutlinedIcon from '@mui/icons-material/DoubleArrowOutlined';
+function Header({titlePage}) {
     return (
-        <Paper className={classes.paper}>
-            <Typography variant="h5">Header</Typography>
+        <Paper elevation={2} sx={{bgcolor:'primary.light', marginBottom:'20px'}}>
+            <Box sx={{display: 'flex', alignItems:'center', justifyContent:'space-between', padding: '10px'}}>
+            <DoubleArrowOutlinedIcon sx={{color: '#fff' , fontSize:'30px'}}/>
+                <Typography variant='h5' sx={{color: '#fcff00' }}>
+                   
+                    {titlePage!='Home' ? titlePage + '     Management': titlePage}</Typography>
+                <AccountCircleOutlinedIcon sx={{fontSize: '30px', color: '#fff' }}/>
+            </Box>
         </Paper>
     )
 }
