@@ -1,13 +1,16 @@
 import { Box } from "@mui/material";
-import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import { useEffect } from "react";
 
-export default function Modal({children}) {
+export default function Modal({secondary,children}) {
     useEffect(()=>{
-        disableBodyScroll(document)
-        return ()=>{
-            enableBodyScroll(document)
+        if(!secondary){
+            disableBodyScroll(document)
+            return ()=>{
+                enableBodyScroll(document)
+            }
         }
+        
     },[])
     return (
         <Box sx={{

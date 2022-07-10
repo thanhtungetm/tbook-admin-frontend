@@ -2,9 +2,9 @@ import CheckCircleOutlineOutlinedIcon from '@mui/icons-material/CheckCircleOutli
 import ErrorOutlineOutlinedIcon from '@mui/icons-material/ErrorOutlineOutlined'
 import { Box, Button, Paper, Skeleton, Typography } from '@mui/material'
 import Modal from '~/components/Modal'
-export default function Notification({ message, close, err }) {
+export default function Notification({secondary, message, close, err }) {
     return (
-        <Modal>
+        <Modal secondary={secondary}>
             <Paper
                 sx={{
                     bgcolor: '#fff',

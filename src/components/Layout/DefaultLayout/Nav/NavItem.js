@@ -1,14 +1,14 @@
-import { createTheme, ListItem, ListItemButton, ListItemIcon, ListItemText, ThemeProvider } from '@mui/material'
+import { ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material'
 import { useEffect } from 'react'
-import { NavLink, useLocation} from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 
 
 function NavItem({ to, title, end, icon ,setTitlePage }) {
     const location = useLocation()
     useEffect(()=>{
         if(location.pathname===to){
-        setTitlePage(title)
-    }
+            setTitlePage(title)
+        }
     })
     
     return (

@@ -21,10 +21,10 @@ export default function Nav({setTitlePage}) {
             <Divider sx={{bgcolor:'#fff'}}/>
             <nav >
                 <List>                
-                    <NavItem to='/admin' title='Home' end icon={<HomeOutlinedIcon />} setTitlePage={setTitlePage}/>
-                    <NavItem to='/admin/category' title='Category' icon={<CategoryOutlinedIcon />} setTitlePage={setTitlePage}/>
-                    <NavItem to='/admin/book' title='Book' icon={<MenuBookOutlinedIcon />} setTitlePage={setTitlePage}/>
-                    <NavItem to='/admin/order' title='Order' icon={<LocalMallOutlinedIcon />} setTitlePage={setTitlePage}/>
+                    <NavItem to='/' title='Home' end icon={<HomeOutlinedIcon />} setTitlePage={setTitlePage}/>
+                    <NavItem to='/category' title='Category' icon={<CategoryOutlinedIcon />} setTitlePage={setTitlePage}/>
+                    <NavItem to='/book' title='Book' icon={<MenuBookOutlinedIcon />} setTitlePage={setTitlePage}/>
+                    <NavItem to='/order' title='Order' icon={<LocalMallOutlinedIcon />} setTitlePage={setTitlePage}/>
                 </List>
             </nav>
             
